@@ -18,6 +18,7 @@
     "lint": "lint-staged"
   },
   "dependencies": {
+    "@iconify-json/akar-icons": "^1.1.4",
     "@vueuse/core": "^8.3.1",
     "@vueuse/head": "^0.7.6",
     "nprogress": "^0.2.0",
