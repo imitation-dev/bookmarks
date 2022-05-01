@@ -16,7 +16,7 @@ defineProps({
 
     <div class="flex flex-wrap justify-between mx--2">
       <div v-for="(item, j) in bookmark.items" :key="j" class="flex-1 px-2 min-w-250px">
-        <div class="flex flex-col mt-5 h-140px h-bg h-border transition-all hover:bg-gray1 shadow">
+        <div class="flex flex-col mt-5 h-140px h-bg h-border transition-all hover:bg-gray1:80 dark:hover:bg-gray5:10 shadow">
           <a :href="item.zhLink || item.enLink" target="_blank" class="flex-1">
             <div class="px-14px py-10px">
               <div class="flex items-center">
