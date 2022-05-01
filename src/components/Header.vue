@@ -15,7 +15,7 @@ import { toggleDark } from '~/composables'
           <div i="carbon-sun dark:carbon-moon" />
         </button>
 
-        <a class="icon-btn mx-2" rel="noreferrer" title="GitHub" href="https://github.com/developer-plus/bookmarks" target="_blank">
+        <a class="icon-btn mx-2" rel="noreferrer" title="GitHub" href="https://github.com/imitation-dev/bookmarks" target="_blank">
           <div i-carbon-logo-github />
         </a>
       </div>
