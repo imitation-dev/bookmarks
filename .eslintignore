@@ -1,0 +1,10 @@
+dist
+public
+node_modules
+pnpm-lock.yaml
+CHANGELOG.en-US.md
+!.*
+docs/components.d.ts
+coverage
+ssr-testing/cases/*
+*.md
