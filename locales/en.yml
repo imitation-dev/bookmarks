@@ -1,0 +1,10 @@
+button:
+  about: About
+  back: Back
+  go: GO
+  home: Home
+  toggle_dark: Toggle dark mode
+  toggle_langs: Change languages
+  zh_CN: 中文
+  english: English
+not-found: Not found

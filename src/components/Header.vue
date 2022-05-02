@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { toggleDark } from '~/composables'
+const { t } = useI18n()
 </script>
 
 <template>
@@ -11,7 +12,7 @@ import { toggleDark } from '~/composables'
       </router-link>
 
       <div class="flex items-center">
-        <button class="icon-btn mx-2 !outline-none" title="切换深色模式" @click="toggleDark()">
+        <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
           <div i="carbon-sun dark:carbon-moon" />
         </button>
 
