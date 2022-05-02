@@ -7,6 +7,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Unocss from 'unocss/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import VueI18n from '@intlify/vite-plugin-vue-i18n'
 
 export default defineConfig({
   resolve: {
@@ -31,8 +32,9 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
-        '@vueuse/core',
+        'vue-i18n',
         '@vueuse/head',
+        '@vueuse/core',
       ],
       dts: 'src/typings/auto-imports.d.ts',
     }),
@@ -50,6 +52,13 @@ export default defineConfig({
       iconDirs: [resolve(process.cwd(), 'src/assets/icons')],
       symbolId: 'icon-[dir]-[name]',
       customDomId: '__svg__icons__dom__',
+    }),
+
+    // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
+    VueI18n({
+      runtimeOnly: true,
+      compositionOnly: true,
+      include: [resolve(__dirname, 'locales/**')],
     }),
   ],
 })
