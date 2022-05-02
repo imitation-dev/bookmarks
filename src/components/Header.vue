@@ -1,6 +1,15 @@
 <script setup lang="ts">
 import { toggleDark } from '~/composables'
-const { t } = useI18n()
+const { t, availableLocales, locale } = useI18n()
+
+const toggleLocales = () => {
+  const locales = availableLocales
+  locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
+}
+
+const localeIcon = computed(() => {
+  return locale.value === 'en'
+})
 </script>
 
 <template>
@@ -14,6 +23,10 @@ const { t } = useI18n()
       <div class="flex items-center">
         <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
           <div i="carbon-sun dark:carbon-moon" />
+        </button>
+        <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_langs')" @click="toggleLocales">
+          <div v-show="localeIcon" i="clarity-language-solid" />
+          <div v-show="!localeIcon" i="clarity-language-line" />
         </button>
 
         <a class="icon-btn mx-2" rel="noreferrer" title="GitHub" href="https://github.com/imitation-dev/bookmarks" target="_blank">
