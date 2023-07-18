@@ -5,6 +5,7 @@ defineProps({
     required: true,
   },
 })
+const { t } = useI18n()
 </script>
 
 <template>
@@ -33,10 +34,10 @@ defineProps({
               <div i-carbon-logo-github />
             </a>
             <a v-if="item.zhLink" class="badge-xs-green mr-2 hover:bg-green4:30" :href="item.zhLink" target="_blank">
-              中文
+              {{ t('button.zh_CN') }}
             </a>
             <a v-if="item.enLink" class="badge-xs-red mr-2 hover:bg-red4:30" :href="item.enLink" target="_blank">
-              English
+              {{ t('button.english') }}
             </a>
           </div>
         </div>
